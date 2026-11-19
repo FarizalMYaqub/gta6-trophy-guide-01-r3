@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend: GTA 6 Trophy Guide and Tracker</title>
+<meta name="description" content="Offline tracker and guide for all 55 Grand Theft Auto VI trophies on PS5: checklist, roadmap to platinum, missable warnings, and a guide for every trophy with sources.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 Trophies</p>
+    <h1><span class="neon">Leonida</span> <span class="neon2">Legend</span></h1>
+    <p class="lede">The complete GTA 6 trophy guide and tracker. <strong>1 platinum, 2 gold, 6 silver, 46 bronze.</strong> Check off trophies as you earn them, follow the roadmap to platinum, and read a guide for every trophy with its sources. Everything runs offline from these files. No account, no sync, no network.</p>
+    <div class="progress-card" id="progressCard">
+      <div class="progress-top">
+        <div class="big-count"><span id="earnedCount">0</span><span> / 55 earned</span></div>
+        <div class="pct" id="pctLabel">0% to platinum</div>
+      </div>
+      <div class="bar" role="progressbar" aria-label="Progress to platinum" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar"><div id="progressFill"></div></div>
+      <div class="grade-counts" id="gradeCounts"></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="tabs" aria-label="Sections">
+    <button type="button" data-goto="tracker" aria-selected="true">Tracker</button>
+    <button type="button" data-goto="roadmap" aria-selected="false">Roadmap to Platinum</button>
+    <button type="button" data-goto="missable" aria-selected="false">Missable Warning</button>
+    <button type="button" data-goto="tips" aria-selected="false">Tips</button>
+  </nav>
+
+  <section id="tracker" aria-label="Trophy tracker">
+    <h2>Trophy Tracker</h2>
+    <p class="section-note">Tick a trophy when it pops on your PS5. Progress saves in this browser automatically. Export it to keep a backup, or import it on another device.</p>
+    <div class="controls">
+      <input type="search" id="search" placeholder="Search trophy name or description" aria-label="Search trophies">
+      <select id="gradeFilter" aria-label="Filter by grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+      <div class="chip-row" id="kindChips" role="group" aria-label="Filter by kind">
+        <button type="button" class="chip" data-kind="all" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-kind="story" aria-pressed="false">Story</button>
+        <button type="button" class="chip" data-kind="collectibles" aria-pressed="false">Collectibles</button>
+        <button type="button" class="chip" data-kind="activities" aria-pressed="false">Activities</button>
+        <button type="button" class="chip" data-kind="missable" aria-pressed="false">Missable</button>
+      </div>
+      <label class="switch"><input type="checkbox" id="hideEarned"> Hide earned</label>
+      <label class="switch"><input type="checkbox" id="spoilerToggle" checked> Hide story spoilers</label>
+      <div class="btn-row">
+        <button type="button" class="btn" id="exportBtn">Export progress</button>
+        <button type="button" class="btn" id="importBtn">Import progress</button>
+        <button type="button" class="btn danger" id="resetBtn">Reset all</button>
+        <input type="file" id="importFile" accept="application/json,.json" hidden>
+      </div>
+    </div>
+    <p class="result-line" id="resultLine"></p>
+    <ul class="trophies" id="trophyList"></ul>
+    <p class="empty" id="emptyState" hidden>No trophies match these filters. Clear the search or pick another filter.</p>
+  </section>
+
+  <section id="roadmap" aria-label="Roadmap to platinum">
+    <h2>Roadmap to Platinum</h2>
+    <p class="section-note">Five stages, in the order that wastes the least time. The story comes first because it unlocks the map, the activities and the robbery tools. The long grinds come last, when you can do them in free roam without story pressure.</p>
+    <ol class="roadmap" id="roadmapList">
+      <li data-stage-trophies="2,3,4,5,6,7,8,9,10,11,12,13,28">
+        <span class="stage-done" hidden>Stage complete</span>
+        <h3>Stage 1: Play the story, watch the one missable</h3>
+        <p>Play Chapters 1 to 4 and the final mission at your own pace. <b>Before Chapter 1 ends, meditate at Lucia's balcony spot.</b> It counts toward Positive Mental Attitude and the spot is gone after the chapter. Keep a manual save at the start of every chapter. Do not use cheats: they disable trophies.</p>
+        <p class="stage-trophies">Covers: all chapter trophies, the final mission gold, and the missable meditation spot.</p>
+      </li>
+      <li data-stage-trophies="22,23,24,26,27,25,29">
+        <span class="stage-done" hidden>Stage complete</span>
+        <h3>Stage 2: Side characters and strangers</h3>
+        <p>Finish the mission strands for Andy, Kenton, Billy, Randy and Tyrone, then take on three more stranger strands to reach 8 for Strangers and Freaks. Hunt the unique animal for Bret while you are out in the wild.</p>
+        <p class="stage-trophies">Covers: the five side character finals, Strangers and Freaks, Fair Game.</p>
+      </li>
+      <li data-stage-trophies="15,16,17,18,19,20,21,32,36">
+        <span class="stage-done" hidden>Stage complete</span>
+        <h3>Stage 3: Activities grind</h3>
+        <p>Work through the races, the drone races, the shooting range golds and the fishing challenge with Cal. Stack stunts toward 250 and clear challenges toward 50 as you go. Try one of each activity type for Master of None and finish an arcade game.</p>
+        <p class="stage-trophies">Covers: Cunning Stunts, The Shootist, Top Fun, Earn Cash Not Kudos, Baited My Tackle, Stick Fiddler, One Last Thing, Gunslinger.</p>
+      </li>
+      <li data-stage-trophies="33,34,39,40,41,43,52,53,54,55">
+        <span class="stage-done" hidden>Stage complete</span>
+        <h3>Stage 4: Robberies and money</h3>
+        <p>Rob the jewelry store undetected, five bank vaults, an armored truck and one illegal operation per gang. Launder every Marked Bill through your contacts toward $250,000, spend $100,000 in shops, buy all the garages, and register 10 vehicles to the Scooter Bros app.</p>
+        <p class="stage-trophies">Covers: all robbery trophies, Dime on the Dollar, Treat Yo Self, Little Boxes, On the Spot.</p>
+      </li>
+      <li data-stage-trophies="1,14,30,31,35,42,37,38,44,45,46,47,48,49,50,51">
+        <span class="stage-done" hidden>Stage complete</span>
+        <h3>Stage 5: Collectibles, secrets and 100 percent</h3>
+        <p>Sweep the map for the card sets, the 100 WAiNK It spots, the 100 vehicles and every region of Leonida. Chase the cryptic hidden trophies: the tank, the showroom smash, the bowling alley, the cocktail on Ocean Beach and the story riddles. Then open the in-game 100 percent checklist and clear whatever it still shows. The platinum pops when the last item does.</p>
+        <p class="stage-trophies">Covers: A Long Road, the collectibles, the cryptic hidden trophies, and the platinum itself.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="missable" aria-label="Missable trophies">
+    <h2>Missable Warning</h2>
+    <p class="section-note">Only one trophy is confirmed missable. Everything else can be earned after the story in free roam.</p>
+    <div class="missable-box">
+      <h3>Positive Mental Attitude: meditate at every spot across Leonida</h3>
+      <p>There are 18 meditation spots. One of them is Lucia's balcony spot in Chapter 1, and it disappears when the chapter ends. There is no mission replay in GTA 6, so missing it locks the trophy for that playthrough.</p>
+      <ul>
+        <li>Meditate at the balcony spot as soon as you can in Chapter 1.</li>
+        <li>Keep a manual save at the start of every chapter, and one before the final mission.</li>
+        <li>Do the other 17 spots at any time. They stay available after the story.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="tips" aria-label="Tips">
+    <h2>Tips Before You Start</h2>
+    <div class="tips">
+      <div class="tip"><b>No online trophies.</b> All 55 unlock in single player. No PS Plus, no co-op partner and no online mode are needed.</div>
+      <div class="tip"><b>Cheats disable trophies.</b> Turning on a cheat switches trophies off, and you cannot save while a cheat is active. Finish the platinum hunt first, then play with cheats.</div>
+      <div class="tip"><b>Expect a long hunt.</b> The story alone runs about 60 hours, and the full list takes roughly 200 hours. It is long, not hard: there are no difficulty trophies and no mission medals.</div>
+      <div class="tip"><b>Save by hand.</b> Keep a manual save at the start of each chapter and one before the final mission. There is no mission replay, so a save is your only way back.</div>
+      <div class="tip"><b>Some guides are still being confirmed.</b> A few hidden trophies have joke descriptions and no published method yet. This guide says so plainly where that is the case, and cites the sources it used, instead of inventing steps.</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Unofficial fan guide. Not affiliated with Rockstar Games or Sony. Trophy names, descriptions, grades and hidden flags are the official PlayStation 5 list as published on Exophase and PSNProfiles on 18 November 2026. Guides are written in our own words. No Rockstar logo or official artwork is used here.</p>
+    <p>Sources for the official list: <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase</a> and <a href="https://psnprofiles.com/trophies/43531-grand-theft-auto-vi">PSNProfiles</a>. Extra guidance is cited per trophy from Push Square, KeenGamer, PlanetGTA6 and OutputLag. Data file: <a href="data/trophies.json">app/data/trophies.json</a>.</p>
+    <p>Leonida Legend is an open source offline guide. Your progress never leaves this browser except when you export it yourself.</p>
+  </footer>
+</div>
+<script src="app.js" defer></script>
+</body>
+</html>
